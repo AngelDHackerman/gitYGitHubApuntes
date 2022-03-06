@@ -2,12 +2,12 @@
 Notas para poder usar git y github 
 
 
-                                   CREAR UN REPOSITORIO DE GIT
+#                                    CREAR UN REPOSITORIO DE GIT
 
 
-git init                           se inicia un repositorio en local
-git status                         se ve el estado del proyecto en este momento
-git rm fileName.txt                elimina el archivo llamado de git, pero sigue estando en el catch (en memoria ram) 
+`git init`                           se inicia un repositorio en local
+`git status`                         se ve el estado del proyecto en este momento
+`git rm fileName.txt`                elimina el archivo llamado de git, pero sigue estando en el catch (en memoria ram) 
 git rm --chached fileName.txt      elimina el archivo llamado de git y si lo elimina del catch (se elimina de la memoria ram)
 git add fileName.txt               agrega un archivo a la historia de git
 git add .                          agrega todos los archivos nuevos a catch de git.
