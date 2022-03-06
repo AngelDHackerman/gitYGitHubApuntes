@@ -2,7 +2,7 @@
 Notas para poder usar git y github 
 
 
-# CREAR UN REPOSITORIO DE GIT
+## CREAR UN REPOSITORIO DE GIT
 
 
 `git init`                           se inicia un repositorio en local
@@ -20,7 +20,7 @@ Notas para poder usar git y github
 `git -m "descripcion del commit"`    agrega un commit junto con un mensaje.
 
 
-#                                   CONFIGURAR GIT
+##                                   CONFIGURAR GIT
 
 
 
@@ -39,35 +39,34 @@ Notas para poder usar git y github
 `git log fileName.txt`                              muestra la historia de commits en el archivo.
 
 
-#                                             ANALIZAR LOS CAMBIOS EN LOS ARCHIVOS DEL PROYECTO
+##                                            ANALIZAR LOS CAMBIOS EN LOS ARCHIVOS DEL PROYECTO
 
 
-git show fileName.txt                                  muestra los cambios hechos en el archivo
-git diff                                      muestra la diferencia entre lo que tenemos en staging y lo que tenemos en disco duro
-git diff numeroDelPrimerCommit numeroDelUltimoCommit    comparamos un nuevo commit con algun otro viejo commit y ver sus diferencias.
+`git show fileName.txt`                                  muestra los cambios hechos en el archivo
+
+`git diff`                                      muestra la diferencia entre lo que tenemos en staging y lo que tenemos en disco duro
+
+`git diff numeroDelPrimerCommit numeroDelUltimoCommit`    comparamos un nuevo commit con algun otro viejo commit y ver sus diferencias.
 
 
-                                             REGRESAR EN EL TIEMPO EN GIT
+##                                            REGRESAR EN EL TIEMPO EN GIT
 
 
-git reset numeroDelCommit --hard                  con esto podemos regresar al commit deseado y fuerza todos los cambios al commit llamado ( es el MAS USADO y mas peligroso)
+`git reset numeroDelCommit --hard`                  con esto podemos regresar al commit deseado y fuerza todos los cambios al commit llamado ( es el MAS USADO y mas peligroso)
 
-git reset numeroDelCommit --soft                  volvemos a la version anterior pero lo que tengamos en staging sigue en staging (en memoria ram antes de dar commit)
+`git reset numeroDelCommit --soft`                  volvemos a la version anterior pero lo que tengamos en staging sigue en staging (en memoria ram antes de dar commit)
 
-git log --stat                                    vamos a ver los cambios especificos que se hicieron en cuales archivos apartir de commit.
+`git log --stat`                                    vamos a ver los cambios especificos que se hicieron en cuales archivos apartir de commit.
 
-git checkout numeroDelCommit fileName.txt           podemos ver como era el archivo llamado en el numero de commit que seleccionamos sin hacer un reset en el documento.
+`git checkout numeroDelCommit fileName.txt`           podemos ver como era el archivo llamado en el numero de commit que seleccionamos sin hacer un reset en el documento.
 
-git checkout master fileName.txt               nos muestra la ultima version que habiamos commiteado la ultima vez. (esto es peligroso porque si hacemos commit vamos a borrar el progreso)
+`git checkout master fileName.txt`               nos muestra la ultima version que habiamos commiteado la ultima vez. (esto es peligroso porque si hacemos commit vamos a borrar el progreso)
 
-git rm --cached:                             Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
+`git rm --cached`                             Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
 
-git rm --force                              Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos,
-                                           de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados)
+`git rm --force`                              Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados)
 
-git reset HEAD                              Este es el comando para sacar archivos del área de Staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos
-                                           archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
-
+`git reset HEAD`                              Este es el comando para sacar archivos del área de Staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
 
 
      ¿Qué podemos hacer?
