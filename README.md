@@ -1,6 +1,9 @@
 # gitYGitHubApuntes
 Notas para poder usar git y github 
 
+## Links para cada seccion: 
+
+1. [Crear un repositorio en git](https://github.com/angelDariaux/gitYGitHubApuntes#crear-un-repositorio-de-git)
 
 ## CREAR UN REPOSITORIO DE GIT
 
@@ -69,19 +72,7 @@ Notas para poder usar git y github
 `git reset HEAD`                              Este es el comando para sacar archivos del área de Staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
 
 
-     ¿Qué podemos hacer?
-
-     Bueno, todos los cambios están en el área de Staging, incluido el archivo con los cambios que no están listos. Esto significa que debemos sacar ese archivo de Staging para poder hacer commit de todos los demás.
-
-     ¡Al usar git rm lo que haremos será eliminar este archivo completamente de git! Todavía tendremos el historial de cambios de este archivo, con la eliminación del archivo como su última actualización. Recuerda que en este caso no buscábamos eliminar un archivo, solo dejarlo como estaba y actualizarlo después, no en este commit.
-
-     En cambio, si usamos git reset HEAD, lo único que haremos será mover estos cambios de Staging a Unstaged. Seguiremos teniendo los últimos cambios del archivo, el repositorio mantendrá el archivo (no con sus últimos cambios pero sí con los últimos en los que hicimos commit) y no habremos perdido nada.
-
-     Conclusión: Lo mejor que puedes hacer para salvar tu puesto y evitar un incendio en tu trabajo es conocer muy bien la diferencia y los riesgos de todos los comandos de Git
-
-
-
-                                                       RAMAS O BRANCHES IN GIT
+##                                                     RAMAS O BRANCHES IN GIT
 
 
 git commit -am "commit a agregar"                      esto le da add a los cambios y agrega un commit (solo funciona si no es un archivo nuevo al que no se la dado add .)
