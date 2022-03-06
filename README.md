@@ -2,7 +2,7 @@
 Notas para poder usar git y github 
 
 
-#                                    CREAR UN REPOSITORIO DE GIT
+# CREAR UN REPOSITORIO DE GIT
 
 
 `git init`                           se inicia un repositorio en local
@@ -11,27 +11,35 @@ Notas para poder usar git y github
 
 `git rm fileName.txt`                elimina el archivo llamado de git, pero sigue estando en el catch (en memoria ram) 
 
-git rm --chached fileName.txt      elimina el archivo llamado de git y si lo elimina del catch (se elimina de la memoria ram)
-git add fileName.txt               agrega un archivo a la historia de git
-git add .                          agrega todos los archivos nuevos a catch de git.
-git -m "descripcion del commit"    agrega un commit junto con un mensaje.
+`git rm --chached fileName.txt`      elimina el archivo llamado de git y si lo elimina del catch (se elimina de la memoria ram)
+
+`git add fileName.txt`               agrega un archivo a la historia de git
+
+`git add .`                          agrega todos los archivos nuevos a catch de git.
+
+`git -m "descripcion del commit"`    agrega un commit junto con un mensaje.
+
+
+#                                   CONFIGURAR GIT
 
 
 
-                                   CONFIGURAR GIT
+`git config`                                       muestra como funciona la configuracion de git.
+
+`git config --list`                                se ve la configuracion por defecto de mi git.
+
+`git config -l`                                     lo mismo que lo de arriba.
+
+`git config --list --show-origin`                   muestra donde estan las configuraciones guardadas.
+
+`git config --global user.name "Tu nombre aqui"`   cambia el nombre que voy a usar en git.
+
+`git config --global user.email "ejemplo@gmail.com"`    cambia el email que voy a usar en git.
+
+`git log fileName.txt`                              muestra la historia de commits en el archivo.
 
 
-
-git config                                       muestra como funciona la configuracion de git.
-git config --list                                se ve la configuracion por defecto de mi git.
-git config -l                                     lo mismo que lo de arriba.
-git config --list --show-origin                   muestra donde estan las configuraciones guardadas.
-git config --global user.name "Angel Hernandez"   cambia el nombre que voy a usar en git.
-git config --global user.email "angel@gmail.com"    cambia el email que voy a usar en git.
-git log fileName.txt                              muestra la historia de commits en el archivo.
-
-
-                                             ANALIZAR LOS CAMBIOS EN LOS ARCHIVOS DEL PROYECTO
+#                                             ANALIZAR LOS CAMBIOS EN LOS ARCHIVOS DEL PROYECTO
 
 
 git show fileName.txt                                  muestra los cambios hechos en el archivo
