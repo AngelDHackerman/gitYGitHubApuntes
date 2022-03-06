@@ -4,17 +4,20 @@ Notas para poder usar git y github
 ## Links para cada seccion: 
 
 1. [Crear un repositorio en git](https://github.com/angelDariaux/gitYGitHubApuntes#crear-un-repositorio-de-git)
-
 2. [Configurar git]()
-
 3. [Analizar los cambios en los archivos del proyecto]()
-
 4. [Regresar en el tiempo en git]()
-
 5. [Ramas o Branches en Git]()
-
-6. 
-
+6. [Usando GitHub]()
+7. [Configurar llaves ssh en local]()
+8. [Tags y versiones en git y GitHub (comando arbolito)]()
+9. [Manejo de ramas en GitHub]()
+10. [Configurando multiples colaborades en github]()
+11. []()
+12. []()
+13. []()
+14. []()
+15. []()
 
 ## CREAR UN REPOSITORIO DE GIT
 
@@ -83,7 +86,7 @@ Notas para poder usar git y github
 `git reset HEAD`                              Este es el comando para sacar archivos del área de Staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
 
 
-##                                                     RAMAS O BRANCHES IN GIT
+##                                                     RAMAS O BRANCHES EN GIT
 
 
 git commit -am "commit a agregar"                      esto le da add a los cambios y agrega un commit (solo funciona si no es un archivo nuevo al que no se la dado add .)
