@@ -5,6 +5,17 @@ Notas para poder usar git y github
 
 1. [Crear un repositorio en git](https://github.com/angelDariaux/gitYGitHubApuntes#crear-un-repositorio-de-git)
 
+2. [Configurar git]()
+
+3. [Analizar los cambios en los archivos del proyecto]()
+
+4. [Regresar en el tiempo en git]()
+
+5. [Ramas o Branches en Git]()
+
+6. 
+
+
 ## CREAR UN REPOSITORIO DE GIT
 
 
@@ -86,7 +97,7 @@ git branch -a                                          muestra las ramas locales
 git merge ramaAUnificar                                estando en la rama principal, hacemos merge para agregar los ultimos cambios hechos en la otra rama.
 
 
-                                                       USANDO GITHUB
+##                                                      USANDO GITHUB
 
 
 git remote add origin direccionUrlDelRepositorio       asi se agrega un repositorio remoto usando https SUPER IMPORTANTE CUANDO INICIAMOS UN NUEVO REPOSITORIO EN GIT!!!
@@ -97,7 +108,7 @@ git pull origin nombreDelaRama                    traemos los cambios desde le r
 git pull origin master --allow-unrelated-histories     CASO SUPER AISLADO con esto podemos fucionar los cambios de local con los del repositorio remoto.
 
 
-                                             CONFIGURAR LLAVES SSH EN LOCAL
+##                                            CONFIGURAR LLAVES SSH EN LOCAL
 
 
      Estando en el HOME del sismtema: 
@@ -119,7 +130,7 @@ git remote set-url origin(OElNombreDelRepoEnLocal) git@github.com:angelDariaux/h
 git pull origin master             esto lo hacemos para unir el origin con la rama master del repo remoto
 
 
-                                        TAGS Y VERSIONES EN GIT Y GITHUB (comando Arbolito)
+##                                        TAGS Y VERSIONES EN GIT Y GITHUB (comando Arbolito)
 
 
 git log --all                                               nos muestra todos los cambios hechos en nuestro repositorio local
@@ -135,7 +146,7 @@ git tag -d nombreDelTag                             asi eliminamos los tags dent
 git push origin :refs/tags/nombreDelTagABorrar         asi se eliminan los tags en el repositorio REMOTO
 
 
-                                             MANEJO DE RAMAS EN GITHUB
+##                                           MANEJO DE RAMAS EN GITHUB
 
 
 git show-branch                              muestra las ramas que existe y cual a sido su historia.
@@ -143,12 +154,12 @@ git show-branch --all                        lo mismo de arriba pero con mas det
 gitk                                         muestra toda la historia de manera visual.
 
 
-                                            CONFIGURANDO MULTIPLES COLABORADORES EN GITHUB
+#                                         CONFIGURANDO MULTIPLES COLABORADORES EN GITHUB
 
 git clone direccionDeGitHub                       asi clonamos un repositorio siendo colaboradores
 
 
-                                             MULTIPLES ENTORNOS DE TRABAJO EN GIT
+##                                             MULTIPLES ENTORNOS DE TRABAJO EN GIT
 
      REBASE solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!
      
@@ -161,7 +172,7 @@ git rebase ramaAModificar                    con esto modificamos la rama llamad
 git rebase ramaExperiemental                 con esto terminamos de modificar la rama original con la rama experimental.
 
 
-                                             GIT STASH: GUARDAR CAMBIOS EN MEMORIA Y RECUPERARLOS DESPUES
+##                                         GIT STASH: GUARDAR CAMBIOS EN MEMORIA Y RECUPERARLOS DESPUES
 
 Stahs siver para cuando estas en una rama pero quieres hacerle modificaciones a otra rama SIN hacerle commit a la rama actual donde estamos trabajando. Guarda los cambios en un lugar temporal
      Estando en la rama actuial donde no queremos hacer commit todavia: 
@@ -173,7 +184,7 @@ git stash branch nombreDeLaNuevaRama         con esto salvamos los cambios que h
 git stash drop                               con esto eliminamos lo que tenemos en stash.
 
 
-                                             GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS
+##                                           GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS
 
      git clean sirve para eliminar archivos que no han sido trackeados y que no queremos agregar al respositorio.
 
@@ -181,7 +192,7 @@ git clean --dry-run                               podemos ver lo que se va a bor
 git clean -f                             se borran los archivos no trackeados, pero deja los archivos con el mismo nombre que los que si estan traqueados (toca borrarlos a mano) y que los los .gitignore
 
 
-                                             GIT CHERRY-PICK: TRAER COMMITS VIEJOS AL HEAD DE UN BRANCH
+##                                           GIT CHERRY-PICK: TRAER COMMITS VIEJOS AL HEAD DE UN BRANCH
 
 git log --online                        podemos ver los commits de forma ordenada.
 
@@ -190,20 +201,20 @@ git log --online                        podemos ver los commits de forma ordenad
 git cherry-pick numeroDelHash                     nos traemos solos los cambios que hicimos en se commit. 
 
 
-                                             RECONSTRUIR COMMITS CON AMEND
+##                                          RECONSTRUIR COMMITS CON AMEND
 
 
 git commit --amend -m "nuevoNombreDelCommit"           con esto reparamos el nombre del ultimo commit de la rama donde estamos.
 
 
-                                        GIT RESET Y REFLOG: USESE EN CASO DE EMERGENCIA
+##                                     GIT RESET Y REFLOG: USESE EN CASO DE EMERGENCIA
 
 
 git reflog                                             aqui se ve TODO y se ven los "HEAD" del proyecto es decir los cambios hechos y ver donde estaba el apuntador.
 git reset --HARD numeroDelHash                      con el head que sacamos del reflog podemos usar reset y regresar todo antes de haber hecho los cambios indeseados.
 
 
-                                        BUSCAR ARCHIVOS Y COMMITS DE GIT CON GREP Y LOG
+##                                    BUSCAR ARCHIVOS Y COMMITS DE GIT CON GREP Y LOG
 
 git grep palabraABuscar                      con esto buscamos la palabra dentro de nuestro proyecto
 git grep -n palabraABuscar                   lo mismo de arriba pero nos dice el numero de linea.
@@ -214,7 +225,7 @@ git log -S "palabraABuscar"                  con esto buscamos la palabra selecc
 
 
 
-                                             COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB (episodio 42)
+##                                           COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB (episodio 42)
 
 
 git shortlog                                      con este podemos ver cuantos commits ha hecho cada miembro del proyecto
