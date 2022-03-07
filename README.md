@@ -137,7 +137,7 @@ Notas para poder usar git y github
 
 2. Generada la llave PUBLICA la debemos copiar y llevarla a github para poder comunicarnos con el respositorio remoto.
 
-`eval $(ssh-agent -s)`           Estando en la terminalmcon esto evaluamos si todo esta funcionando bien con las llaves criptograficas.
+`eval $(ssh-agent -s)`           Estando en la terminal con esto evaluamos si todo esta funcionando bien con las llaves criptograficas.
 
     
 3. Ahora debemos agregar la llave que acabamos de crear.
