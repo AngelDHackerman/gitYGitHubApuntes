@@ -4,23 +4,23 @@ Notas para poder usar git y github
 ## Links para cada seccion: 
 
 1. [Crear un repositorio en git](https://github.com/angelDariaux/gitYGitHubApuntes#crear-un-repositorio-de-git)
-2. [Configurar git]()
-3. [Analizar los cambios en los archivos del proyecto]()
-4. [Regresar en el tiempo en git]()
-5. [Ramas o Branches en Git]()
-6. [Usando GitHub]()
-7. [Configurar llaves ssh en local]()
-8. [Tags y versiones en git y GitHub (comando arbolito)]()
-9. [Manejo de ramas en GitHub]()
-10. [Configurando multiples colaborades en github]()
-11. [Multiples entornos de trabajo en git]()
-12. [Git Stash: Guardar cambios en memoria y recuperarlos despues]()
-13. [Git Clean: limpiar tu proyecto de archivos no deseados]()
-14. [Git cherry-pick: traer commits viejos al head de un branch]()
-15. [Reconstruir commits con Amend]()
-16. [Git reset y Reflog: USESE EN CASO DE EMERGENCIA!!!]()
-17. [Buscar archivos y commits de git con grep y log]()
-18. [Comandos y recursos colaborativos en git y github]()
+2. [Configurar git](https://github.com/angelDariaux/gitYGitHubApuntes#configurar-git)
+3. [Analizar los cambios en los archivos del proyecto](https://github.com/angelDariaux/gitYGitHubApuntes#analizar-los-cambios-en-los-archivos-del-proyecto)
+4. [Regresar en el tiempo en git](https://github.com/angelDariaux/gitYGitHubApuntes#regresar-en-el-tiempo-en-git)
+5. [Ramas o Branches en Git](https://github.com/angelDariaux/gitYGitHubApuntes#ramas-o-branches-en-git)
+6. [Usando GitHub](https://github.com/angelDariaux/gitYGitHubApuntes#usando-github)
+7. [Configurar llaves ssh en local](https://github.com/angelDariaux/gitYGitHubApuntes#configurar-llaves-ssh-en-local)
+8. [Tags y versiones en git y GitHub (comando arbolito)](https://github.com/angelDariaux/gitYGitHubApuntes#tags-y-versiones-en-git-y-github-comando-arbolito)
+9. [Manejo de ramas en GitHub](https://github.com/angelDariaux/gitYGitHubApuntes#manejo-de-ramas-en-github)
+10. [Configurando multiples colaborades en github](https://github.com/angelDariaux/gitYGitHubApuntes#configurando-multiples-colaboradores-en-github)
+11. [Multiples entornos de trabajo en git](https://github.com/angelDariaux/gitYGitHubApuntes#multiples-entornos-de-trabajo-en-git)
+12. [Git Stash: Guardar cambios en memoria y recuperarlos despues](https://github.com/angelDariaux/gitYGitHubApuntes#git-stash-guardar-cambios-en-memoria-y-recuperarlos-despues)
+13. [Git Clean: limpiar tu proyecto de archivos no deseados](https://github.com/angelDariaux/gitYGitHubApuntes#git-clean-limpiar-tu-proyecto-de-archivos-no-deseados)
+14. [Git cherry-pick: traer commits viejos al head de un branch](https://github.com/angelDariaux/gitYGitHubApuntes#git-cherry-pick-traer-commits-viejos-al-head-de-un-branch)
+15. [Reconstruir commits con Amend](https://github.com/angelDariaux/gitYGitHubApuntes#reconstruir-commits-con-amend)
+16. [Git reset y Reflog: USESE EN CASO DE EMERGENCIA \!!!](https://github.com/angelDariaux/gitYGitHubApuntes#git-reset-y-reflog-usese-en-caso-de-emergencia)
+17. [Buscar archivos y commits de git con grep y log](https://github.com/angelDariaux/gitYGitHubApuntes#buscar-archivos-y-commits-de-git-con-grep-y-log)
+18. [Comandos y recursos colaborativos en git y github](https://github.com/angelDariaux/gitYGitHubApuntes#comandos-y-recursos-colaborativos-en-git-y-github-episodio-42)
 
 
 ## CREAR UN REPOSITORIO DE GIT
@@ -232,7 +232,7 @@ git log -S "palabraABuscar"                  con esto buscamos la palabra selecc
 
 
 
-##                                           COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB (episodio 42)
+##                                           COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB
 
 
 git shortlog                                      con este podemos ver cuantos commits ha hecho cada miembro del proyecto
