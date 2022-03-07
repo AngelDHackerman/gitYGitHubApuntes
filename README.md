@@ -199,11 +199,11 @@ Estando en NUESTRA terminal ejecutamos:
 `Git rebase` Solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!.
 
      
-1. **Estando en la rama que queremos unir de sin dejar rastro de la historia**
+1. **Estando en la rama que queremos unir de sin dejar rastro de la historia:**
 
 `git rebase ramaAModificar`                    con esto modificamos la rama llamada desde la rama que queremos unir sin dejar rastro en el historial de git.
 
-2. **Estando en la rama que se modificara de manera permanente, ejecutamos**
+2. **Estando en la rama que se modificara de manera permanente, ejecutamos:**
 
 `git rebase ramaExperiemental`                 con esto terminamos de modificar la rama original con la rama experimental.
 
@@ -211,7 +211,7 @@ Estando en NUESTRA terminal ejecutamos:
 
 `Git Stash` sive para cuando estas en una rama pero quieres hacerle modificaciones a otra rama SIN HACERLE COMMIT a la rama actual donde estamos trabajando. Guarda los cambios en un lugar temporal.
 
-1. **Estando en la rama actual donde NO queremos hacer commit todavia**:
+1. **Estando en la rama actual donde NO queremos hacer commit todavia:**
 
 `git stash`                                    guarda los cambios en un lugar temporal sin modificar el mocumento y perminitiendonos ir a la otra rama sin perder el progreso y sin necesidad de hacer commit.
 
@@ -225,55 +225,62 @@ Estando en NUESTRA terminal ejecutamos:
 
 ##                                           GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS
 
-`Git Clean` 
-sirve para eliminar archivos que no han sido trackeados y que no queremos agregar al respositorio**
+`Git Clean` **sirve para eliminar archivos que no han sido trackeados y que no queremos agregar al respositorio**
 
 
-git clean --dry-run                               podemos ver lo que se va a borrar sin borrarlo.
-git clean -f                             se borran los archivos no trackeados, pero deja los archivos con el mismo nombre que los que si estan traqueados (toca borrarlos a mano) y que los los .gitignore
+`git clean --dry-run`                               podemos ver lo que se va a borrar sin borrarlo.
 
+`git clean -f`                             se borran los archivos no trackeados, pero deja los archivos con el mismo nombre que los que si estan traqueados (toca borrarlos a mano) y que los los .gitignore
 
 ##                                           GIT CHERRY-PICK: TRAER COMMITS VIEJOS AL HEAD DE UN BRANCH
 
-git log --online                        podemos ver los commits de forma ordenada.
+`git log --online`                        podemos ver los commits de forma ordenada.
 
-     Desde la rama que tomara los cambios:
+1. **Desde la rama que tomara los cambios:**
 
-git cherry-pick numeroDelHash                     nos traemos solos los cambios que hicimos en se commit. 
+`git cherry-pick numeroDelHash`                     nos traemos solos los cambios que hicimos en se commit. 
 
 
 ##                                          RECONSTRUIR COMMITS CON AMEND
 
 
-git commit --amend -m "nuevoNombreDelCommit"           con esto reparamos el nombre del ultimo commit de la rama donde estamos.
-
+`git commit --amend -m "nuevoNombreDelCommit"`           con esto reparamos el nombre del ultimo commit de la rama donde estamos.
 
 ##                                     GIT RESET Y REFLOG: USESE EN CASO DE EMERGENCIA
 
 
-git reflog                                             aqui se ve TODO y se ven los "HEAD" del proyecto es decir los cambios hechos y ver donde estaba el apuntador.
-git reset --HARD numeroDelHash                      con el head que sacamos del reflog podemos usar reset y regresar todo antes de haber hecho los cambios indeseados.
+`git reflog`                                             aqui se ve TODO y se ven los "HEAD" del proyecto es decir los cambios hechos y ver donde estaba el apuntador.
+
+`git reset --HARD numeroDelHash`                      con el head que sacamos del reflog podemos usar reset y regresar todo antes de haber hecho los cambios indeseados.
 
 
 ##                                    BUSCAR ARCHIVOS Y COMMITS DE GIT CON GREP Y LOG
 
-git grep palabraABuscar                      con esto buscamos la palabra dentro de nuestro proyecto
-git grep -n palabraABuscar                   lo mismo de arriba pero nos dice el numero de linea.
-git grep -c palabraABuscar                   cuenta el numero de veces que fue usada la palabra selecionada.
-git grep -c "<\p>"                            lo mismo de arriba pero este es usado para cuando tenemos los caracteres <> para buscar un parrafo dentro de nuestro codigo.
+`git grep palabraABuscar`                      con esto buscamos la palabra dentro de nuestro proyecto.
 
-git log -S "palabraABuscar"                  con esto buscamos la palabra seleccionada pero dentro de los commits.
+`git grep -n palabraABuscar`                   lo mismo de arriba pero nos dice el numero de linea.
 
+`git grep -c palabraABuscar`                   cuenta el numero de veces que fue usada la palabra selecionada.
+
+`git grep -c "<p>"`                            lo mismo de arriba pero este es usado para cuando tenemos los caracteres <> para buscar un parrafo dentro de nuestro codigo.
+
+`git log -S "palabraABuscar"`                  con esto buscamos la palabra seleccionada pero dentro de los commits.
 
 
 ##                                           COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB
 
 
-git shortlog                                      con este podemos ver cuantos commits ha hecho cada miembro del proyecto
-git shortlog -sn                                  nos muesta las personas que han hecho los commits
-git shortlog -sn --all                            muestra tdos los commits hasta los que fueron borrados. 
-git shortlog -sn --all --no-merges                nos muestra todos los commits menos los merges.
-git config --global alias.stats "shortlog -sn --all --no-merges"           asi creamos un alias llamado stats dentro del entorno git y NO el global y va a ejecutar shorlog ...
+`git shortlog`                                      con este podemos ver cuantos commits ha hecho cada miembro del proyecto.
 
-git blame -c nombreDelArchivo                           aqui podemos ver quien creo cada linea del codigo
-git blame nombreDelArchivo -L15,45 -c                   podemos ver quien modifico esas lines en el archivo invocado.
+`git shortlog -sn`                                  nos muesta las personas que han hecho los commits.
+
+`git shortlog -sn --all`                            muestra tdos los commits hasta los que fueron borrados. 
+
+`git shortlog -sn --all --no-merges`                nos muestra todos los commits menos los merges.
+
+`git config --global alias.stats "shortlog -sn --all --no-merges"`           asi creamos un alias llamado stats dentro del entorno git y NO el global y va a ejecutar shorlog ...
+
+`git blame -c nombreDelArchivo`                           **aqui podemos ver quien creo cada linea del codigo**
+
+`git blame nombreDelArchivo -L15,45 -c`                   podemos ver quien modifico esas lines en el archivo invocado.
+
