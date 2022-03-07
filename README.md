@@ -192,11 +192,13 @@ Estando en NUESTRA terminal ejecutamos:
 `git clone direccionDeGitHub`                       asi clonamos un repositorio siendo colaboradores.
 
 
-##                                             MULTIPLES ENTORNOS DE TRABAJO EN GIT
+#                                             MULTIPLES ENTORNOS DE TRABAJO EN GIT
+##                                            Git Rebase, eliminando la historia.
 
-     REBASE solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!
+`Git rebase` Solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!.
+
      
-     Estando en la rama que queremos unir de sin dejar rastro de la historia: 
+1. **Estando en la rama que queremos unir de sin dejar rastro de la historia: **
 
 git rebase ramaAModificar                    con esto modificamos la rama llamada desde la rama que queremos unir sin dejar rastro en el historial de git.
 
