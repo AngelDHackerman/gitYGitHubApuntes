@@ -183,6 +183,7 @@ Estando en NUESTRA terminal ejecutamos:
 `git show-branch --all`                        lo mismo de arriba pero con mas detalles.
 
 `gitk`                                         muestra toda la historia de manera visual.
+
 `sudo apt install gitk`                        (Por si no lo tenemos instalado y para verficar si ya lo esta).
 
 
