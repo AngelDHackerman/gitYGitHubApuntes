@@ -199,11 +199,11 @@ Estando en NUESTRA terminal ejecutamos:
 `Git rebase` Solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!.
 
      
-**Estando en la rama que queremos unir de sin dejar rastro de la historia**
+1. **Estando en la rama que queremos unir de sin dejar rastro de la historia**
 
 `git rebase ramaAModificar`                    con esto modificamos la rama llamada desde la rama que queremos unir sin dejar rastro en el historial de git.
 
-**Estando en la rama que se modificara de manera permanente, ejecutamos**
+2. **Estando en la rama que se modificara de manera permanente, ejecutamos**
 
 `git rebase ramaExperiemental`                 con esto terminamos de modificar la rama original con la rama experimental.
 
