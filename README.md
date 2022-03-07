@@ -93,48 +93,65 @@ Notas para poder usar git y github
 ##                                                     RAMAS O BRANCHES EN GIT
 
 
-git commit -am "commit a agregar"                      esto le da add a los cambios y agrega un commit (solo funciona si no es un archivo nuevo al que no se la dado add .)
-git branch nombreDeLaNuevaRama                         asi creamos nuevas ramas en git.
-git branch -D nombreDelaRama                           asi borramos las ramas.
-git push origen --delete nombreDeLaRama                asi borramos las ramas en remoto.  
-git checkout nombreDeLaRama                            asi nos movemos a una rama diferente.
-git branch                                             muestra las ramas que tenemos.
-git branch -r                                          muestra las ramas que tenemos en remoto.
-git branch -a                                          muestra las ramas locales y las remotas.
-git merge ramaAUnificar                                estando en la rama principal, hacemos merge para agregar los ultimos cambios hechos en la otra rama.
+`git commit -am "commit a agregar"`                      esto le da add a los cambios y agrega un commit (solo funciona si no es un archivo nuevo al que no se la dado add .)
+
+`git branch nombreDeLaNuevaRama`                         asi creamos nuevas ramas en git.
+
+`git branch -D nombreDelaRama`                           asi borramos las ramas.
+
+`git push origen --delete nombreDeLaRama`                asi borramos las ramas en remoto.  
+
+`git checkout nombreDeLaRama`                            asi nos movemos a una rama diferente.
+
+`git branch`                                             muestra las ramas que tenemos.
+
+`git branch -r`                                          muestra las ramas que tenemos en remoto.
+
+`git branch -a`                                          muestra las ramas locales y las remotas.
+
+`git merge ramaAUnificar`                                estando en la rama principal, hacemos merge para agregar los ultimos cambios hechos en la otra rama.
+
 
 
 ##                                                      USANDO GITHUB
 
 
-git remote add origin direccionUrlDelRepositorio       asi se agrega un repositorio remoto usando https SUPER IMPORTANTE CUANDO INICIAMOS UN NUEVO REPOSITORIO EN GIT!!!
-git remote                                        podemos ver los respositorios remotos
-git remote -v                                     podemos ver la URL de los repositorios remotos
-git push origin nombreDeLaRama                    asi mandamos los cambios hechos a github de la rama que estamos seleccionando.
-git pull origin nombreDelaRama                    traemos los cambios desde le repositorio remoto hacia la rama seleccionada.
-git pull origin master --allow-unrelated-histories     CASO SUPER AISLADO con esto podemos fucionar los cambios de local con los del repositorio remoto.
+`git remote add origin direccionUrlDelRepositorio`       asi se agrega un repositorio remoto usando https SUPER IMPORTANTE CUANDO INICIAMOS UN NUEVO REPOSITORIO EN GIT!!!
 
+`git remote`                                        podemos ver los respositorios remotos
+
+`git remote -v`                                     podemos ver la URL de los repositorios remotos
+
+`git push origin nombreDeLaRama`                    asi mandamos los cambios hechos a github de la rama que estamos seleccionando.
+
+`git pull origin nombreDelaRama`                    traemos los cambios desde le repositorio remoto hacia la rama seleccionada.
+
+`git pull origin master --allow-unrelated-histories`     CASO SUPER AISLADO con esto podemos fucionar los cambios de local con los del repositorio remoto.
 
 ##                                            CONFIGURAR LLAVES SSH EN LOCAL
 
 
-     Estando en el HOME del sismtema: 
+1. Estando en el HOME del sismtema: 
 
-ssh-keygen -t rsa -b 4096 -C "angel@gmail.com"         asi se genera la llave publica y privada
+`ssh-keygen -t rsa -b 4096 -C "ejemplo@gmail.com"`         asi se genera la llave publica y privada.
 
-     Generada la llave PUBLICA la debemos copiar y llevarla a github para poder comunicarnos con el respositorio remoto
+2. Generada la llave PUBLICA la debemos copiar y llevarla a github para poder comunicarnos con el respositorio remoto.
 
-eval $(ssh-agent -s)               con esto evaluamos si todo esta funcionando bien con las llaves criptograficas
-     
-     Ahora debemos agregar la llave que acabamos de crear.
+`eval $(ssh-agent -s)`           Estando en la terminalmcon esto evaluamos si todo esta funcionando bien con las llaves criptograficas.
 
-ssh-add rutaDondeTenemosNuestraLlaveSSHPRIVADA
+    
+3. Ahora debemos agregar la llave que acabamos de crear.
 
-     Estando en la carpeta del PROYECTO
+Estando en NUESTRA terminal ejecutamos: 
 
-git remote set-url origin(OElNombreDelRepoEnLocal) git@github.com:angelDariaux/hyperblo3.0.git(direccionDelRepoRemotoDeGit)
+`ssh-add rutaDondeTenemosNuestraLlaveSSHPRIVADA`
 
-git pull origin master             esto lo hacemos para unir el origin con la rama master del repo remoto
+4. Estando en la carpeta del PROYECTO ejecutamos:
+
+`git remote set-url origin(ElNombreDelRepoEnLocal) git@github.com:direccionDelRepoRemotoDeGit`
+
+`git pull origin master`             esto lo hacemos para unir el origin con la rama master del repo remoto.
+
 
 
 ##                                        TAGS Y VERSIONES EN GIT Y GITHUB (comando Arbolito)
