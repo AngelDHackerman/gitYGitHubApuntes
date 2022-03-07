@@ -157,30 +157,38 @@ Estando en NUESTRA terminal ejecutamos:
 ##                                        TAGS Y VERSIONES EN GIT Y GITHUB (comando Arbolito)
 
 
-git log --all                                               nos muestra todos los cambios hechos en nuestro repositorio local
-git log --all --graph                                   lo mismo de arriba pero con lineas para hacer las facil leer los cambios
-git log --all --graph --decorate --oneline               podemos ver toda la historia de nuestro proyecto de manera grafica (aqui se creamos el comando arbolito)
+`git log --all`                                               nos muestra todos los cambios hechos en nuestro repositorio local.
 
-git tag -a nombreDelTag -m "mensajeDelTag" numeroDelHashDondePonerElTag         asi colocamos un tag en el hash del commit deseado.
+`git log --all --graph`                                   lo mismo de arriba pero con lineas para hacer las facil leer los cambios.
 
-git tag                                             nos muestra una lista de los tags que tenemos en el proyecto
-git show-ref --tags                                 muestra a que commit esta asignado cada tag en el proyecto
-git push origin --tags                               con esto mandamos nuestros tags al repo remoto.
-git tag -d nombreDelTag                             asi eliminamos los tags dentro del repo LOCAL.    
-git push origin :refs/tags/nombreDelTagABorrar         asi se eliminan los tags en el repositorio REMOTO
+`git log --all --graph --decorate --oneline`               podemos ver toda la historia de nuestro proyecto de manera grafica (aqui se creamos el comando arbolito).
 
+`git tag -a nombreDelTag -m "mensajeDelTag" numeroDelHashDondePonerElTag`         asi colocamos un tag en el hash del commit deseado.
+
+`git tag`                                             nos muestra una lista de los tags que tenemos en el proyecto.
+
+`git show-ref --tags`                                 muestra a que commit esta asignado cada tag en el proyecto.
+
+`git push origin --tags`                               con esto mandamos nuestros tags al repo remoto.
+
+`git tag -d nombreDelTag`                             asi eliminamos los tags dentro del repo LOCAL.
+
+`git push origin :refs/tags/nombreDelTagABorrar`         asi se eliminan los tags en el repositorio REMOTO.
 
 ##                                           MANEJO DE RAMAS EN GITHUB
 
 
-git show-branch                              muestra las ramas que existe y cual a sido su historia.
-git show-branch --all                        lo mismo de arriba pero con mas detalles.
-gitk                                         muestra toda la historia de manera visual.
+`git show-branch`                              muestra las ramas que existe y cual a sido su historia.
+
+`git show-branch --all`                        lo mismo de arriba pero con mas detalles.
+
+`gitk`                                         muestra toda la historia de manera visual.
+`sudo apt install gitk`                        (Por si no lo tenemos instalado y para verficar si ya lo esta).
 
 
 #                                         CONFIGURANDO MULTIPLES COLABORADORES EN GITHUB
 
-git clone direccionDeGitHub                       asi clonamos un repositorio siendo colaboradores
+`git clone direccionDeGitHub`                       asi clonamos un repositorio siendo colaboradores.
 
 
 ##                                             MULTIPLES ENTORNOS DE TRABAJO EN GIT
