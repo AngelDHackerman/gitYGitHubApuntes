@@ -14,13 +14,14 @@ Notas para poder usar git y github
 9. [Manejo de ramas en GitHub](https://github.com/angelDariaux/gitYGitHubApuntes#manejo-de-ramas-en-github)
 10. [Configurando multiples colaborades en github](https://github.com/angelDariaux/gitYGitHubApuntes#configurando-multiples-colaboradores-en-github)
 11. [Multiples entornos de trabajo en git](https://github.com/angelDariaux/gitYGitHubApuntes#multiples-entornos-de-trabajo-en-git)
-12. [Git Stash: Guardar cambios en memoria y recuperarlos despues](https://github.com/angelDariaux/gitYGitHubApuntes#git-stash-guardar-cambios-en-memoria-y-recuperarlos-despues)
-13. [Git Clean: limpiar tu proyecto de archivos no deseados](https://github.com/angelDariaux/gitYGitHubApuntes#git-clean-limpiar-tu-proyecto-de-archivos-no-deseados)
-14. [Git cherry-pick: traer commits viejos al head de un branch](https://github.com/angelDariaux/gitYGitHubApuntes#git-cherry-pick-traer-commits-viejos-al-head-de-un-branch)
-15. [Reconstruir commits con Amend](https://github.com/angelDariaux/gitYGitHubApuntes#reconstruir-commits-con-amend)
-16. [Git reset y Reflog: USESE EN CASO DE EMERGENCIA \!!!](https://github.com/angelDariaux/gitYGitHubApuntes#git-reset-y-reflog-usese-en-caso-de-emergencia)
-17. [Buscar archivos y commits de git con grep y log](https://github.com/angelDariaux/gitYGitHubApuntes#buscar-archivos-y-commits-de-git-con-grep-y-log)
-18. [Comandos y recursos colaborativos en git y github](https://github.com/angelDariaux/gitYGitHubApuntes#comandos-y-recursos-colaborativos-en-git-y-github-episodio-42)
+12. [Git rebase](https://github.com/angelDariaux/gitYGitHubApuntes#git-rebase-eliminando-la-historia)
+13. [Git Stash: Guardar cambios en memoria y recuperarlos despues](https://github.com/angelDariaux/gitYGitHubApuntes#git-stash-guardar-cambios-en-memoria-y-recuperarlos-despues)
+14. [Git Clean: limpiar tu proyecto de archivos no deseados](https://github.com/angelDariaux/gitYGitHubApuntes#git-clean-limpiar-tu-proyecto-de-archivos-no-deseados)
+15. [Git cherry-pick: traer commits viejos al head de un branch](https://github.com/angelDariaux/gitYGitHubApuntes#git-cherry-pick-traer-commits-viejos-al-head-de-un-branch)
+16. [Reconstruir commits con Amend](https://github.com/angelDariaux/gitYGitHubApuntes#reconstruir-commits-con-amend)
+17. [Git reset y Reflog: USESE EN CASO DE EMERGENCIA \!!!](https://github.com/angelDariaux/gitYGitHubApuntes#git-reset-y-reflog-usese-en-caso-de-emergencia)
+18. [Buscar archivos y commits de git con grep y log](https://github.com/angelDariaux/gitYGitHubApuntes#buscar-archivos-y-commits-de-git-con-grep-y-log)
+19. [Comandos y recursos colaborativos en git y github](https://github.com/angelDariaux/gitYGitHubApuntes#comandos-y-recursos-colaborativos-en-git-y-github-episodio-42)
 
 
 ## CREAR UN REPOSITORIO DE GIT
@@ -271,27 +272,3 @@ git config --global alias.stats "shortlog -sn --all --no-merges"           asi c
 
 git blame -c nombreDelArchivo                           aqui podemos ver quien creo cada linea del codigo
 git blame nombreDelArchivo -L15,45 -c                   podemos ver quien modifico esas lines en el archivo invocado.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
