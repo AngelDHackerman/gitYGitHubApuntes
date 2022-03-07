@@ -199,30 +199,34 @@ Estando en NUESTRA terminal ejecutamos:
 `Git rebase` Solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!.
 
      
-1. **Estando en la rama que queremos unir de sin dejar rastro de la historia: **
+1. ***Estando en la rama que queremos unir de sin dejar rastro de la historia: ***
 
-git rebase ramaAModificar                    con esto modificamos la rama llamada desde la rama que queremos unir sin dejar rastro en el historial de git.
+`git rebase ramaAModificar`                    con esto modificamos la rama llamada desde la rama que queremos unir sin dejar rastro en el historial de git.
 
-     Estabdi en la rama que se modificara de manera permanente 
+2. ***Estando en la rama que se modificara de manera permanente, ejecutamos: ***
 
-git rebase ramaExperiemental                 con esto terminamos de modificar la rama original con la rama experimental.
-
+`git rebase ramaExperiemental`                 con esto terminamos de modificar la rama original con la rama experimental.
 
 ##                                         GIT STASH: GUARDAR CAMBIOS EN MEMORIA Y RECUPERARLOS DESPUES
 
-Stahs siver para cuando estas en una rama pero quieres hacerle modificaciones a otra rama SIN hacerle commit a la rama actual donde estamos trabajando. Guarda los cambios en un lugar temporal
-     Estando en la rama actuial donde no queremos hacer commit todavia: 
+`Git Stash` sive para cuando estas en una rama pero quieres hacerle modificaciones a otra rama SIN HACERLE COMMIT a la rama actual donde estamos trabajando. Guarda los cambios en un lugar temporal.
 
-git stash                                    guarda los cambios en un lugar temporal sin modificar el mocumento y perminitiendonos ir a la otra rama sin perder el progreso y sin necesidad de hacer commit.
-git stash list                                vemos lo que tenemos en stash. WIP= Work In Progress
-git stash pop                                vemos el stash que teniamos antes y los cambios que habiamos ejecutado durante el stash.
-git stash branch nombreDeLaNuevaRama         con esto salvamos los cambios que hicimos en el stash en otra rama.
-git stash drop                               con esto eliminamos lo que tenemos en stash.
+1. ***Estando en la rama actual donde NO queremos hacer commit todavia: ***
 
+`git stash`                                    guarda los cambios en un lugar temporal sin modificar el mocumento y perminitiendonos ir a la otra rama sin perder el progreso y sin necesidad de hacer commit.
+
+`git stash list`                                vemos lo que tenemos en stash. WIP= Work In Progress.
+
+`git stash pop`                                vemos el stash que teniamos antes y los cambios que habiamos ejecutado durante el stash.
+
+`git stash branch nombreDeLaNuevaRama`         con esto salvamos los cambios que hicimos en el stash en otra rama.
+
+`git stash drop`                               con esto eliminamos lo que tenemos en stash.
 
 ##                                           GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS
 
-     git clean sirve para eliminar archivos que no han sido trackeados y que no queremos agregar al respositorio.
+`Git Clean` ***sirve para eliminar archivos que no han sido trackeados y que no queremos agregar al respositorio.***
+
 
 git clean --dry-run                               podemos ver lo que se va a borrar sin borrarlo.
 git clean -f                             se borran los archivos no trackeados, pero deja los archivos con el mismo nombre que los que si estan traqueados (toca borrarlos a mano) y que los los .gitignore
