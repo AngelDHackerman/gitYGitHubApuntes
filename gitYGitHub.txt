@@ -14,13 +14,14 @@ Notas para poder usar git y github
 9. [Manejo de ramas en GitHub](https://github.com/angelDariaux/gitYGitHubApuntes#manejo-de-ramas-en-github)
 10. [Configurando multiples colaborades en github](https://github.com/angelDariaux/gitYGitHubApuntes#configurando-multiples-colaboradores-en-github)
 11. [Multiples entornos de trabajo en git](https://github.com/angelDariaux/gitYGitHubApuntes#multiples-entornos-de-trabajo-en-git)
-12. [Git Stash: Guardar cambios en memoria y recuperarlos despues](https://github.com/angelDariaux/gitYGitHubApuntes#git-stash-guardar-cambios-en-memoria-y-recuperarlos-despues)
-13. [Git Clean: limpiar tu proyecto de archivos no deseados](https://github.com/angelDariaux/gitYGitHubApuntes#git-clean-limpiar-tu-proyecto-de-archivos-no-deseados)
-14. [Git cherry-pick: traer commits viejos al head de un branch](https://github.com/angelDariaux/gitYGitHubApuntes#git-cherry-pick-traer-commits-viejos-al-head-de-un-branch)
-15. [Reconstruir commits con Amend](https://github.com/angelDariaux/gitYGitHubApuntes#reconstruir-commits-con-amend)
-16. [Git reset y Reflog: USESE EN CASO DE EMERGENCIA \!!!](https://github.com/angelDariaux/gitYGitHubApuntes#git-reset-y-reflog-usese-en-caso-de-emergencia)
-17. [Buscar archivos y commits de git con grep y log](https://github.com/angelDariaux/gitYGitHubApuntes#buscar-archivos-y-commits-de-git-con-grep-y-log)
-18. [Comandos y recursos colaborativos en git y github](https://github.com/angelDariaux/gitYGitHubApuntes#comandos-y-recursos-colaborativos-en-git-y-github-episodio-42)
+12. [Git rebase](https://github.com/angelDariaux/gitYGitHubApuntes#git-rebase-eliminando-la-historia)
+13. [Git Stash: Guardar cambios en memoria y recuperarlos despues](https://github.com/angelDariaux/gitYGitHubApuntes#git-stash-guardar-cambios-en-memoria-y-recuperarlos-despues)
+14. [Git Clean: limpiar tu proyecto de archivos no deseados](https://github.com/angelDariaux/gitYGitHubApuntes#git-clean-limpiar-tu-proyecto-de-archivos-no-deseados)
+15. [Git cherry-pick: traer commits viejos al head de un branch](https://github.com/angelDariaux/gitYGitHubApuntes#git-cherry-pick-traer-commits-viejos-al-head-de-un-branch)
+16. [Reconstruir commits con Amend](https://github.com/angelDariaux/gitYGitHubApuntes#reconstruir-commits-con-amend)
+17. [Git reset y Reflog: USESE EN CASO DE EMERGENCIA \!!!](https://github.com/angelDariaux/gitYGitHubApuntes#git-reset-y-reflog-usese-en-caso-de-emergencia)
+18. [Buscar archivos y commits de git con grep y log](https://github.com/angelDariaux/gitYGitHubApuntes#buscar-archivos-y-commits-de-git-con-grep-y-log)
+19. [Comandos y recursos colaborativos en git y github](https://github.com/angelDariaux/gitYGitHubApuntes#comandos-y-recursos-colaborativos-en-git-y-github-episodio-42)
 
 
 ## CREAR UN REPOSITORIO DE GIT
@@ -93,177 +94,193 @@ Notas para poder usar git y github
 ##                                                     RAMAS O BRANCHES EN GIT
 
 
-git commit -am "commit a agregar"                      esto le da add a los cambios y agrega un commit (solo funciona si no es un archivo nuevo al que no se la dado add .)
-git branch nombreDeLaNuevaRama                         asi creamos nuevas ramas en git.
-git branch -D nombreDelaRama                           asi borramos las ramas.
-git push origen --delete nombreDeLaRama                asi borramos las ramas en remoto.  
-git checkout nombreDeLaRama                            asi nos movemos a una rama diferente.
-git branch                                             muestra las ramas que tenemos.
-git branch -r                                          muestra las ramas que tenemos en remoto.
-git branch -a                                          muestra las ramas locales y las remotas.
-git merge ramaAUnificar                                estando en la rama principal, hacemos merge para agregar los ultimos cambios hechos en la otra rama.
+`git commit -am "commit a agregar"`                      esto le da add a los cambios y agrega un commit (solo funciona si no es un archivo nuevo al que no se la dado add .)
+
+`git branch nombreDeLaNuevaRama`                         asi creamos nuevas ramas en git.
+
+`git branch -D nombreDelaRama`                           asi borramos las ramas.
+
+`git push origen --delete nombreDeLaRama`                asi borramos las ramas en remoto.  
+
+`git checkout nombreDeLaRama`                            asi nos movemos a una rama diferente.
+
+`git branch`                                             muestra las ramas que tenemos.
+
+`git branch -r`                                          muestra las ramas que tenemos en remoto.
+
+`git branch -a`                                          muestra las ramas locales y las remotas.
+
+`git merge ramaAUnificar`                                estando en la rama principal, hacemos merge para agregar los ultimos cambios hechos en la otra rama.
+
 
 
 ##                                                      USANDO GITHUB
 
 
-git remote add origin direccionUrlDelRepositorio       asi se agrega un repositorio remoto usando https SUPER IMPORTANTE CUANDO INICIAMOS UN NUEVO REPOSITORIO EN GIT!!!
-git remote                                        podemos ver los respositorios remotos
-git remote -v                                     podemos ver la URL de los repositorios remotos
-git push origin nombreDeLaRama                    asi mandamos los cambios hechos a github de la rama que estamos seleccionando.
-git pull origin nombreDelaRama                    traemos los cambios desde le repositorio remoto hacia la rama seleccionada.
-git pull origin master --allow-unrelated-histories     CASO SUPER AISLADO con esto podemos fucionar los cambios de local con los del repositorio remoto.
+`git remote add origin direccionUrlDelRepositorio`       asi se agrega un repositorio remoto usando https SUPER IMPORTANTE CUANDO INICIAMOS UN NUEVO REPOSITORIO EN GIT!!!
 
+`git remote`                                        podemos ver los respositorios remotos
+
+`git remote -v`                                     podemos ver la URL de los repositorios remotos
+
+`git push origin nombreDeLaRama`                    asi mandamos los cambios hechos a github de la rama que estamos seleccionando.
+
+`git pull origin nombreDelaRama`                    traemos los cambios desde le repositorio remoto hacia la rama seleccionada.
+
+`git pull origin master --allow-unrelated-histories`     CASO SUPER AISLADO con esto podemos fucionar los cambios de local con los del repositorio remoto.
 
 ##                                            CONFIGURAR LLAVES SSH EN LOCAL
 
 
-     Estando en el HOME del sismtema: 
+1. Estando en el HOME del sismtema: 
 
-ssh-keygen -t rsa -b 4096 -C "angel@gmail.com"         asi se genera la llave publica y privada
+`ssh-keygen -t rsa -b 4096 -C "ejemplo@gmail.com"`         asi se genera la llave publica y privada.
 
-     Generada la llave PUBLICA la debemos copiar y llevarla a github para poder comunicarnos con el respositorio remoto
+2. Generada la llave PUBLICA la debemos copiar y llevarla a github para poder comunicarnos con el respositorio remoto.
 
-eval $(ssh-agent -s)               con esto evaluamos si todo esta funcionando bien con las llaves criptograficas
-     
-     Ahora debemos agregar la llave que acabamos de crear.
+`eval $(ssh-agent -s)`           Estando en la terminal con esto evaluamos si todo esta funcionando bien con las llaves criptograficas.
 
-ssh-add rutaDondeTenemosNuestraLlaveSSHPRIVADA
+    
+3. Ahora debemos agregar la llave que acabamos de crear.
 
-     Estando en la carpeta del PROYECTO
+Estando en NUESTRA terminal ejecutamos: 
 
-git remote set-url origin(OElNombreDelRepoEnLocal) git@github.com:angelDariaux/hyperblo3.0.git(direccionDelRepoRemotoDeGit)
+`ssh-add rutaDondeTenemosNuestraLlaveSSHPRIVADA`
 
-git pull origin master             esto lo hacemos para unir el origin con la rama master del repo remoto
+4. Estando en la carpeta del PROYECTO ejecutamos:
+
+`git remote set-url origin(ElNombreDelRepoEnLocal) git@github.com:direccionDelRepoRemotoDeGit`
+
+`git pull origin master`             esto lo hacemos para unir el origin con la rama master del repo remoto.
+
 
 
 ##                                        TAGS Y VERSIONES EN GIT Y GITHUB (comando Arbolito)
 
 
-git log --all                                               nos muestra todos los cambios hechos en nuestro repositorio local
-git log --all --graph                                   lo mismo de arriba pero con lineas para hacer las facil leer los cambios
-git log --all --graph --decorate --oneline               podemos ver toda la historia de nuestro proyecto de manera grafica (aqui se creamos el comando arbolito)
+`git log --all`                                               nos muestra todos los cambios hechos en nuestro repositorio local.
 
-git tag -a nombreDelTag -m "mensajeDelTag" numeroDelHashDondePonerElTag         asi colocamos un tag en el hash del commit deseado.
+`git log --all --graph`                                   lo mismo de arriba pero con lineas para hacer las facil leer los cambios.
 
-git tag                                             nos muestra una lista de los tags que tenemos en el proyecto
-git show-ref --tags                                 muestra a que commit esta asignado cada tag en el proyecto
-git push origin --tags                               con esto mandamos nuestros tags al repo remoto.
-git tag -d nombreDelTag                             asi eliminamos los tags dentro del repo LOCAL.    
-git push origin :refs/tags/nombreDelTagABorrar         asi se eliminan los tags en el repositorio REMOTO
+`git log --all --graph --decorate --oneline`               podemos ver toda la historia de nuestro proyecto de manera grafica (aqui se creamos el comando arbolito).
 
+`git tag -a nombreDelTag -m "mensajeDelTag" numeroDelHashDondePonerElTag`         asi colocamos un tag en el hash del commit deseado.
+
+`git tag`                                             nos muestra una lista de los tags que tenemos en el proyecto.
+
+`git show-ref --tags`                                 muestra a que commit esta asignado cada tag en el proyecto.
+
+`git push origin --tags`                               con esto mandamos nuestros tags al repo remoto.
+
+`git tag -d nombreDelTag`                             asi eliminamos los tags dentro del repo LOCAL.
+
+`git push origin :refs/tags/nombreDelTagABorrar`         asi se eliminan los tags en el repositorio REMOTO.
 
 ##                                           MANEJO DE RAMAS EN GITHUB
 
 
-git show-branch                              muestra las ramas que existe y cual a sido su historia.
-git show-branch --all                        lo mismo de arriba pero con mas detalles.
-gitk                                         muestra toda la historia de manera visual.
+`git show-branch`                              muestra las ramas que existe y cual a sido su historia.
+
+`git show-branch --all`                        lo mismo de arriba pero con mas detalles.
+
+`gitk`                                         muestra toda la historia de manera visual.
+
+`sudo apt install gitk`                        (Por si no lo tenemos instalado y para verficar si ya lo esta).
 
 
 #                                         CONFIGURANDO MULTIPLES COLABORADORES EN GITHUB
 
-git clone direccionDeGitHub                       asi clonamos un repositorio siendo colaboradores
+`git clone direccionDeGitHub`                       asi clonamos un repositorio siendo colaboradores.
 
 
-##                                             MULTIPLES ENTORNOS DE TRABAJO EN GIT
+#                                             MULTIPLES ENTORNOS DE TRABAJO EN GIT
+##                                            Git Rebase, eliminando la historia.
 
-     REBASE solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!
+`Git rebase` Solo debe usarse en el entorno local, NO debe ser mandado al repositorio remoto. SE DEBE EJECTUAR EL REBASE EN LAS 2 RAMAS LEER TODO ANTES DE HACER UN REBASE!.
+
      
-     Estando en la rama que queremos unir de sin dejar rastro de la historia: 
+1. **Estando en la rama que queremos unir de sin dejar rastro de la historia:**
 
-git rebase ramaAModificar                    con esto modificamos la rama llamada desde la rama que queremos unir sin dejar rastro en el historial de git.
+`git rebase ramaAModificar`                    con esto modificamos la rama llamada desde la rama que queremos unir sin dejar rastro en el historial de git.
 
-     Estabdi en la rama que se modificara de manera permanente 
+2. **Estando en la rama que se modificara de manera permanente, ejecutamos:**
 
-git rebase ramaExperiemental                 con esto terminamos de modificar la rama original con la rama experimental.
-
+`git rebase ramaExperiemental`                 con esto terminamos de modificar la rama original con la rama experimental.
 
 ##                                         GIT STASH: GUARDAR CAMBIOS EN MEMORIA Y RECUPERARLOS DESPUES
 
-Stahs siver para cuando estas en una rama pero quieres hacerle modificaciones a otra rama SIN hacerle commit a la rama actual donde estamos trabajando. Guarda los cambios en un lugar temporal
-     Estando en la rama actuial donde no queremos hacer commit todavia: 
+`Git Stash` sive para cuando estas en una rama pero quieres hacerle modificaciones a otra rama SIN HACERLE COMMIT a la rama actual donde estamos trabajando. Guarda los cambios en un lugar temporal.
 
-git stash                                    guarda los cambios en un lugar temporal sin modificar el mocumento y perminitiendonos ir a la otra rama sin perder el progreso y sin necesidad de hacer commit.
-git stash list                                vemos lo que tenemos en stash. WIP= Work In Progress
-git stash pop                                vemos el stash que teniamos antes y los cambios que habiamos ejecutado durante el stash.
-git stash branch nombreDeLaNuevaRama         con esto salvamos los cambios que hicimos en el stash en otra rama.
-git stash drop                               con esto eliminamos lo que tenemos en stash.
+1. **Estando en la rama actual donde NO queremos hacer commit todavia:**
 
+`git stash`                                    guarda los cambios en un lugar temporal sin modificar el mocumento y perminitiendonos ir a la otra rama sin perder el progreso y sin necesidad de hacer commit.
+
+`git stash list`                                vemos lo que tenemos en stash. WIP= Work In Progress.
+
+`git stash pop`                                vemos el stash que teniamos antes y los cambios que habiamos ejecutado durante el stash.
+
+`git stash branch nombreDeLaNuevaRama`         con esto salvamos los cambios que hicimos en el stash en otra rama.
+
+`git stash drop`                               con esto eliminamos lo que tenemos en stash.
 
 ##                                           GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS
 
-     git clean sirve para eliminar archivos que no han sido trackeados y que no queremos agregar al respositorio.
+`Git Clean` **sirve para eliminar archivos que no han sido trackeados y que no queremos agregar al respositorio**
 
-git clean --dry-run                               podemos ver lo que se va a borrar sin borrarlo.
-git clean -f                             se borran los archivos no trackeados, pero deja los archivos con el mismo nombre que los que si estan traqueados (toca borrarlos a mano) y que los los .gitignore
 
+`git clean --dry-run`                               podemos ver lo que se va a borrar sin borrarlo.
+
+`git clean -f`                             se borran los archivos no trackeados, pero deja los archivos con el mismo nombre que los que si estan traqueados (toca borrarlos a mano) y que los los .gitignore
 
 ##                                           GIT CHERRY-PICK: TRAER COMMITS VIEJOS AL HEAD DE UN BRANCH
 
-git log --online                        podemos ver los commits de forma ordenada.
+`git log --online`                        podemos ver los commits de forma ordenada.
 
-     Desde la rama que tomara los cambios:
+1. **Desde la rama que tomara los cambios:**
 
-git cherry-pick numeroDelHash                     nos traemos solos los cambios que hicimos en se commit. 
+`git cherry-pick numeroDelHash`                     nos traemos solos los cambios que hicimos en se commit. 
 
 
 ##                                          RECONSTRUIR COMMITS CON AMEND
 
 
-git commit --amend -m "nuevoNombreDelCommit"           con esto reparamos el nombre del ultimo commit de la rama donde estamos.
-
+`git commit --amend -m "nuevoNombreDelCommit"`           con esto reparamos el nombre del ultimo commit de la rama donde estamos.
 
 ##                                     GIT RESET Y REFLOG: USESE EN CASO DE EMERGENCIA
 
 
-git reflog                                             aqui se ve TODO y se ven los "HEAD" del proyecto es decir los cambios hechos y ver donde estaba el apuntador.
-git reset --HARD numeroDelHash                      con el head que sacamos del reflog podemos usar reset y regresar todo antes de haber hecho los cambios indeseados.
+`git reflog`                                             aqui se ve TODO y se ven los "HEAD" del proyecto es decir los cambios hechos y ver donde estaba el apuntador.
+
+`git reset --HARD numeroDelHash`                      con el head que sacamos del reflog podemos usar reset y regresar todo antes de haber hecho los cambios indeseados.
 
 
 ##                                    BUSCAR ARCHIVOS Y COMMITS DE GIT CON GREP Y LOG
 
-git grep palabraABuscar                      con esto buscamos la palabra dentro de nuestro proyecto
-git grep -n palabraABuscar                   lo mismo de arriba pero nos dice el numero de linea.
-git grep -c palabraABuscar                   cuenta el numero de veces que fue usada la palabra selecionada.
-git grep -c "<\p>"                            lo mismo de arriba pero este es usado para cuando tenemos los caracteres <> para buscar un parrafo dentro de nuestro codigo.
+`git grep palabraABuscar`                      con esto buscamos la palabra dentro de nuestro proyecto.
 
-git log -S "palabraABuscar"                  con esto buscamos la palabra seleccionada pero dentro de los commits.
+`git grep -n palabraABuscar`                   lo mismo de arriba pero nos dice el numero de linea.
 
+`git grep -c palabraABuscar`                   cuenta el numero de veces que fue usada la palabra selecionada.
+
+`git grep -c "<p>"`                            lo mismo de arriba pero este es usado para cuando tenemos los caracteres <> para buscar un parrafo dentro de nuestro codigo.
+
+`git log -S "palabraABuscar"`                  con esto buscamos la palabra seleccionada pero dentro de los commits.
 
 
 ##                                           COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB
 
 
-git shortlog                                      con este podemos ver cuantos commits ha hecho cada miembro del proyecto
-git shortlog -sn                                  nos muesta las personas que han hecho los commits
-git shortlog -sn --all                            muestra tdos los commits hasta los que fueron borrados. 
-git shortlog -sn --all --no-merges                nos muestra todos los commits menos los merges.
-git config --global alias.stats "shortlog -sn --all --no-merges"           asi creamos un alias llamado stats dentro del entorno git y NO el global y va a ejecutar shorlog ...
+`git shortlog`                                      con este podemos ver cuantos commits ha hecho cada miembro del proyecto.
 
-git blame -c nombreDelArchivo                           aqui podemos ver quien creo cada linea del codigo
-git blame nombreDelArchivo -L15,45 -c                   podemos ver quien modifico esas lines en el archivo invocado.
+`git shortlog -sn`                                  nos muesta las personas que han hecho los commits.
 
+`git shortlog -sn --all`                            muestra tdos los commits hasta los que fueron borrados. 
 
+`git shortlog -sn --all --no-merges`                nos muestra todos los commits menos los merges.
 
+`git config --global alias.stats "shortlog -sn --all --no-merges"`           asi creamos un alias llamado stats dentro del entorno git y NO el global y va a ejecutar shorlog ...
 
+`git blame -c nombreDelArchivo`                           **aqui podemos ver quien creo cada linea del codigo**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`git blame nombreDelArchivo -L15,45 -c`                   podemos ver quien modifico esas lines en el archivo invocado.
 
