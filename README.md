@@ -13,11 +13,15 @@ Notas para poder usar git y github
 8. [Tags y versiones en git y GitHub (comando arbolito)]()
 9. [Manejo de ramas en GitHub]()
 10. [Configurando multiples colaborades en github]()
-11. []()
-12. []()
-13. []()
-14. []()
-15. []()
+11. [Multiples entornos de trabajo en git]()
+12. [Git Stash: Guardar cambios en memoria y recuperarlos despues]()
+13. [Git Clean: limpiar tu proyecto de archivos no deseados]()
+14. [Git cherry-pick: traer commits viejos al head de un branch]()
+15. [Reconstruir commits con Amend]()
+16. [Git reset y Reflog: USESE EN CASO DE EMERGENCIA!!!]()
+17. [Buscar archivos y commits de git con grep y log]()
+18. [Comandos y recursos colaborativos en git y github]()
+
 
 ## CREAR UN REPOSITORIO DE GIT
 
