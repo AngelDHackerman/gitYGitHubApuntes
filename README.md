@@ -121,7 +121,9 @@ Notas para poder usar git y github
 
 `git remote`                                        podemos ver los respositorios remotos
 
-`git remote -v`                                     podemos ver la URL de los repositorios remotos
+`git remote -v`                                     podemos ver la URL de los repositorios remotos.
+
+`git remote set-url origin git@github.com:userName/repo`        Cambianos el destino del repositorio remoto.
 
 `git push origin nombreDeLaRama`                    asi mandamos los cambios hechos a github de la rama que estamos seleccionando.
 
