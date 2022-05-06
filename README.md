@@ -219,7 +219,7 @@ Estando en NUESTRA terminal ejecutamos:
 
 `git stash list`                                vemos lo que tenemos en stash. WIP= Work In Progress.
 
-`git stash pop`                                vemos el stash que teniamos antes y los cambios que habiamos ejecutado durante el stash.
+`git stash pop`                                **vemos el stash que teniamos antes y los cambios que habiamos ejecutado durante el stash.**
 
 `git stash branch nombreDeLaNuevaRama`         con esto salvamos los cambios que hicimos en el stash en otra rama.
 
