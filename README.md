@@ -217,13 +217,13 @@ Estando en NUESTRA terminal ejecutamos:
 
 `git stash`                                    guarda los cambios en un lugar temporal sin modificar el mocumento y perminitiendonos ir a la otra rama sin perder el progreso y sin necesidad de hacer commit.
 
-`git stash list`                                vemos lo que tenemos en stash. WIP= Work In Progress.
+`git stash list`                                vemos lo **que tenemos en stash**. WIP= Work In Progress.
 
 `git stash pop`                                **vemos el stash que teniamos antes y los cambios que habiamos ejecutado durante el stash.**
 
-`git stash branch nombreDeLaNuevaRama`         con esto salvamos los cambios que hicimos en el stash en otra rama.
+`git stash branch nombreDeLaNuevaRama`         con esto **salvamos los cambios que hicimos en el stash en otra rama**.
 
-`git stash drop`                               con esto eliminamos lo que tenemos en stash.
+`git stash drop`                               con esto **eliminamos** lo que tenemos en stash.
 
 ##                                           GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS
 
