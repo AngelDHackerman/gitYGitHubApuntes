@@ -131,6 +131,8 @@ Notas para poder usar git y github
 
 `git pull origin master --allow-unrelated-histories`     CASO SUPER AISLADO con esto podemos fucionar los cambios de local con los del repositorio remoto.
 
+`git rm -r --cached nombreCarpeta`            Esto sirve para cuando algun archivo ya fue "trakeado" suando git add . pero luego se agrego el archivo gitignore y ahora se quiere ignorar los archivos. (elimina los archivos trakeados de la cache de git)
+
 ##                                            CONFIGURAR LLAVES SSH EN LOCAL
 
 
